@@ -19,7 +19,7 @@
 		$_SESSION["usuario_logado"] = $email;
 	}
 
-	function logout() {
-		session_destroy;
+	function logout() { 
+		session_destroy(); 
 	}	
 ?>
