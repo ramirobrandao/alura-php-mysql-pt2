@@ -3,28 +3,36 @@
 ?>
 
 <?php
-if(isset($_GET["logout"]) && $_GET["logout"]==true) {
+if(isset($_SESSION["success"])) {
 ?>
-<p class="alert-success">Deslogado com sucesso!</p>
-<?php } ?>
+<p class="alert-success"><?= $_SESSION["success"] ?></p>
+<?php 
+	unset($_SESSION["success"]);
+} ?>
 
 <?php
-if(isset($_GET["login"]) && $_GET["login"]==true) {
+if(isset($_SESSION["success"])) {
 ?>
-<p class="alert-success">Logado com sucesso!</p>
-<?php } ?>
+<p class="alert-success"><?= $_SESSION["success"] ?></p>
+<?php 
+	unset($_SESSION["success"]);
+} ?>
 
 <?php
-if(isset($_GET["login"]) && $_GET["login"]==false) {
-?>
-<p class="alert-danger">Usuário ou senha inválida!</p>
-<?php } ?>
+if(isset($_SESSION["danger"])) {
+	?>
+<p class="alert-danger"><?= $_SESSION["danger"] ?></p>
+<?php 
+	unset($_SESSION["danger"]);
+} ?>
 
 <?php
-if(isset($_GET["falhaDeSeguranca"]) && $_GET["falhaDeSeguranca"]==true) {
-?>
-<p class="alert-danger">Você não está logado!</p>
-<?php } ?>
+if(isset($_SESSION["danger"])) {
+	?>
+<p class="alert-danger"><?= $_SESSION["danger"] ?></p>
+<?php
+	unset($_SESSION["danger"]);
+} ?>
 
 <h1>Bem vindo!</h1>
 	

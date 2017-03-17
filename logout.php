@@ -1,5 +1,6 @@
 <?php include("logica-usuario.php");
 	logout();
-	header("Location: index.php?logout=true");
+	$_SESSION["success"] = ["Deslogado com sucesso"];
+	header("Location: index.php");
 	die();
 ?>
