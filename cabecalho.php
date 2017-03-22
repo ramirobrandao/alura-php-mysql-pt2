@@ -1,3 +1,13 @@
+<?php 
+error_reporting(E_ALL ^ E_NOTICE);
+include("mostra-alerta.php");
+?>
+
+<?php 
+	mostraAlerta("success");
+	mostraAlerta("danger");
+?>
+
 <html>
 <head>
     <title>Minha loja</title>
