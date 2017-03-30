@@ -9,11 +9,11 @@
 	  $categorias = listaCategorias($conexao);
 	  ?> 
 					
-					<h1>Formulario de produto</h1>
+					<h1>Formulário de produto</h1>
 					<form action="adiciona-produto.php" method="post">
 					<table class="table">
 					
-					<?php include("produto-formulario-base.php"); ?>
+					<?php require_once("produto-formulario-base.php"); ?>
 					
 					<tr>
 						<td>
@@ -23,4 +23,4 @@
 					</table>
 					</form>
 					
-<?php include("rodape.php"); ?>
+<?php require_once("rodape.php"); ?>

@@ -5,12 +5,13 @@
 <h1>Bem vindo!</h1>
 
 <?php if(usuarioEstaLogado()) { ?>
-    <p class="text-success">Você está logado como <?= usuarioLogado() ?>. <a href="logout.php">Deslogar</a></p>
+    <h4><p class="text-success">Você está logado como: <?= usuarioLogado() ?>. <a href="logout.php">Deslogar</a></p><h4>
 <?php } else { ?>
     <h2>Login</h2>
     <form action="login.php" method="post">
         <table class="table">
-            <tr>
+        
+		 <tr>
                 <td>Email</td>
                 <td><input class="form-control" type="email" name="email"></td>
             </tr>

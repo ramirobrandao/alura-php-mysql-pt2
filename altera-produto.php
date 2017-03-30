@@ -13,7 +13,7 @@ if(array_key_exists('usado', $_POST)) {
 }
 
 if(alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado)) { ?>
-    <p class="text-success">O produto <?= $nome ?>, <?= $preco ?> foi alterado.</p>
+    <h3><p class="text-success">O produto <?= $nome; ?> de valor: R$ <?= $preco; ?> foi alterado com sucesso!</p></h3>
 <?php } else {
     $msg = mysqli_error($conexao);
 ?>
@@ -22,4 +22,4 @@ if(alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado
 }
 ?>
 
-<?php include("rodape.php"); ?>
+<?php require_once("rodape.php"); ?>

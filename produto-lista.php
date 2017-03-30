@@ -1,13 +1,25 @@
 <?php require_once("cabecalho.php");
-      require_once("banco-produto.php"); ?>
-
-<table class="table table-striped table-bordered">
-
+      require_once("banco-produto.php"); 
+	  require_once("logica-usuario.php");	
+		verificaUsuario();
+?>
+	  
+<table class="table table-hover table-bordered">
+	<thead>
+      <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Descrição</th>
+		<th>Categoria</th>
+		<th>Alterar</th>
+		<th>Remover</th>
+      </tr>
+    </thead>
     <?php
         $produtos = listaProdutos($conexao);
         foreach($produtos as $produto) :
     ?>
-    <tr>
+	<tr>
         <td><?= $produto['nome'] ?></td>
         <td><?= $produto['preco'] ?></td>
         <td><?= substr($produto['descricao'], 0, 40) ?></td>
@@ -25,4 +37,4 @@
     ?>
 </table>
 
-<?php include("rodape.php"); ?>
+<?php require_once("rodape.php"); ?>

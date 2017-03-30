@@ -15,7 +15,7 @@ if (array_key_exists('usado', $_POST)) {
 }
 
 if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)) { ?>
-    <p class="text-success">O produto <?= $nome; ?>, <?= $preco; ?> adicionado com sucesso!</p>
+    <h3><p class="text-success">O produto <?= $nome; ?> de valor: R$ <?= $preco; ?> foi adicionado com sucesso!</p></h3	>
 <?php } else {
     $msg = mysqli_error($conexao);
 ?>
@@ -24,4 +24,4 @@ if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado)) { 
 }
 ?>
 
-<?php include("rodape.php"); ?>
+<?php require_once("rodape.php"); ?>

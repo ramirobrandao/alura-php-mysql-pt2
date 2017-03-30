@@ -4,12 +4,12 @@
 </tr>
 <tr>
     <td>Preço</td>
-    <td><input  class="form-control" type="number" name="preco" 
+    <td><input  class="form-control" type="number" name="preco" placeholder="Sem caracteres especiais" 
         value="<?=$produto['preco']?>"></td>
 </tr>
 <tr>
     <td>Descrição</td>
-    <td><textarea class="form-control" name="descricao"><?=$produto['descricao']?></textarea></td>
+    <td><textarea class="form-control" name="descricao" placeholder="Até 40 caracteres"><?=$produto['descricao']?></textarea></td>
 </tr>
 <tr>
     <td></td>
